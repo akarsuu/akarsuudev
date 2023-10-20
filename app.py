@@ -4,7 +4,9 @@ from datetime import datetime, timedelta
 from sqlalchemy import func
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask (__name__,
+            static_url_path='',
+            static_folder='../static')
 CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///likes.db'
 db = SQLAlchemy(app)
@@ -55,5 +57,4 @@ def index():
     return render_template('index.html', totalLike = total_likes)
 
 if __name__ == '__main__':
-    app.debug = True
-    app.run()
+    app.run(host='0.0.0.0', port=8000, debug=True)
