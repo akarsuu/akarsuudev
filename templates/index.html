@@ -848,7 +848,7 @@ likeButton.addEventListener('click', function() {
         if (xhr.status === 200) {
             console.log('Like added successfully!');
             var response = JSON.parse(xhr.responseText);
-            likeCount.innerHTML = response.totalLikes + " likes";
+            likeCount.innerHTML = response.totalLike + " likes";
             message.innerHTML = response.message;
         } else {
             console.log('Failed to add like');
