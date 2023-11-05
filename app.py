@@ -19,33 +19,32 @@ class Likes(db.Model):
     likeCount = db.Column(db.Integer, default=0)
     totalLike = db.Column(db.Integer, default=0)
 
+
 with app.app_context():
     db.create_all()
 
 @app.route('/like', methods=['POST'])
 def add_like():
     ip = request.remote_addr
+    
+
     now = datetime.now()
-    totalLike = totalLike
+    
+    # Check if the IP has already liked the specific content
+    existing_like = Likes.query.filter_by(ip=ip).first()
+    if existing_like:
+        return jsonify({'message': "Like already counted", 'totalLike':total_likes})
+  
 
-    # Check if IP is new 
-    if Likes.query.filter_by(ip=ip).first():
-        return jsonify({'message': "Like already counted",})
-    # Create a new like record 
-
+    # Create a new like record for the specific content
     like = Likes(ip=ip, date_created=now, likeCount=1)
     
-    # add the like record to db
-
+    # Add the like record to the database
     db.session.add(like)
     db.session.commit()
 
-    # update the totalLikes
-
+    # Update the totalLikes for the specific content
     total_likes = Likes.query.with_entities(func.sum(Likes.likeCount)).scalar()
-    max_id = Likes.query.with_entities(func.max(Likes.id)).scalar()
-    Likes.query.filter_by(id=max_id).update({'totalLike': total_likes})
-    db.session.commit()
 
     message = "Thank you for your support :)"
 
