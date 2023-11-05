@@ -1,4 +1,3 @@
-
 *{
     text-decoration:none;
     padding:0px;
@@ -1078,7 +1077,7 @@ h5{
 
 @keyframes pulse {
     0% {
-        transform::rotate(-45deg) scale(1);;
+        transform:rotate(-45deg) scale(1);;
     }
     10%{
         transform:rotate(-45deg) scale(1.1);
@@ -1174,10 +1173,28 @@ h5{
 
 
 
+#githubLogoPart{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
+#githubLogoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:5%;
 
+}
 
-
+#github{
+    margin: auto;
+    width:100%;
+    height: auto;
+}
 
 
 
