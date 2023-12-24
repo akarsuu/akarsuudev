@@ -8,12 +8,11 @@
 	<meta name="google-site-verification" content="cKFnSICH8LxBkyd_RCIEjo324I1HLMfZ7tg3Udf7SPE" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--avoids unsecure connection warnings & enables JS scroll properities-->
-        <meta name="description" content="Ulas Akarsu's coding and developing portfolio. Showcase of Ulas Akarsu's projects and skills in web development">
-        <meta name="description" lang="tr" content="Ulaş Akarsu'nun kodlama ve web geliştirme portfolyosu. Ulaş Akarsu'nun web geliştirme projeleri ve kodlama çalışmaları.">
+        <meta name="description" lang="en" content="Ulas Akarsu's coding and developing frontend and backend portfolio. Showcase of Ulas Akarsu's projects and skills in web development">
+        <meta name="description" lang="tr" content="Ulaş Akarsu frontend ve backend kodlama ve web geliştirme portfolyosu. Ulaş Akarsu'nun web geliştirme projeleri ve kodlama çalışmaları.">
         <meta name="author" content="ulas akarsu">
+        <meta name="keywords" content="ulas akarsu, ulaş akarsu, akarsu ulas, ulas, ulaş, akarsu ulaş, web developer, full-stack developer, ulas akarsu portfolio, ulaş akarsu portfolio, ulaş akarsu portfolyo">
         <meta name="robots" content="index, follow">
-
-        <meta name="keywords" content="ulas, ulaş, akarsu, ulas akarsu, ulaş akarsu, akarsu ulas, ulas akarsu portfolio, webapp development, web site developer">
        
         
         <link rel="canonical" href="https://www.akarsuu.dev">
@@ -25,12 +24,11 @@
         
         <link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&display=swap" rel="stylesheet">
         
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        
-       <link rel="icon" href="../static/images/favicon.ico" />
-       
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>       
 
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
         
         <!-- TIME ZONE INFO ---BOTH ARE REQUIRED -->
         
@@ -48,11 +46,14 @@
 
         
         <!-- CSS-->
-        <link rel="stylesheet" href="/static/stylesheet.css">
+        <link rel="stylesheet" href="../static/stylesheet.css">
+        <link rel="icon" href="../static/images/favicon.ico" />
+
 
         <title>Akarsuu's PortFolio</title>
         <meta name="google-site-verification" content="cKFnSICH8LxBkyd_RCIEjo324I1HLMfZ7tg3Udf7SPE" />
 
+        
     </head>
     
     <body>
@@ -109,16 +110,504 @@
                     <p id="port1"><h1>Hello I am akarsuu,</h1></p><br>
                     <p id="port2">I design and develop<br>websites, webapps<br>and code stuff.</p>
                    
-                </div>
-                
-                
-                
+               </div>
+                             
+		  
             </div>
            
            
         
         </div>
         
+
+        <div id="anchor1"></div>
+             
+            <!---------------------------codingPartStart-->
+
+                <div id="codeStaffTitle">
+                       <h2>Coding Stuff</h2>
+                </div>
+            
+               <br><br>
+               
+               
+               
+               
+            
+          
+        
+
+                <div id="code4MainContainer">
+
+                    <div id="code4Left">
+        
+                        <div id="code4ImageContainer">
+                    
+                            
+                         
+                                
+                            <div id="mass-shooting-widget">
+
+
+                                <div id="counterHeader">
+                                    <div id="counterTitle">
+                                        USA Countdown Clock                                    
+                                    </div>
+                                    <div id="counterSubTitle">
+                                        <div id="toggleContainer">
+                                            <div id="togleOff">
+                                                World on Mute?
+                                            </div>
+    
+                                            <div id="audioToggle" class="switch">
+    
+                                                <label class="switch">
+                                                    <input type="checkbox"  id="audioToggle">
+                                                    <span class="slider round"></span>
+                                                </label>
+        
+                                            </div>
+                                            <div id="togleOn">
+                                                Turn it ON!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+
+                                <div id="counterSecondBand">
+
+                                    <div class="lines">
+                                        
+                                        <div class="groups" id="military">
+                                            
+                                            <div class="totalsContainers">
+                                                
+                                                
+                                                    <p class="counterLeftTexts" style="color: rgb(12, 12, 12); font-weight: 100">US military interventions since 1941</p>
+                                                    <p class="counterLeftTotals" id="total-loops-d" style="color: rgb(85, 29, 72); font-weight: 900;"> {{ total_d_loops }} </p>
+                                                    
+                                                
+                                            </div>
+
+
+                                            <div class="countersContainers">
+                                                
+                                                <p class="counterRightTexts" style="color: rgb(12, 12, 12);">next intervention in </p>
+                                                <p class="countingDown" id="remaining-time-d" style="color:#FF5C20; font-weight: 900;"> {{ remaining_d_time }} </p>
+                                            
+                                            </div>
+                                            <div class="counterImagesContainer">
+                                                <img src="static/images/USforce.webp" class="counterImages" id="militaryLogo">
+                                            </div>
+                                        
+                                        </div>
+
+                                        <div class="groups" id="fentanyl">
+                                               <div class="totalsContainers">
+
+                                                <p class="counterLeftTexts" style="color: rgb(12, 12, 12); font-weight: 100;">Fentanyl deaths since 2014</p>
+                                                <p class="counterLeftTotals" id="total-loops-b" style="color: rgb(85, 29, 72); font-weight: 900;"></p>
+
+                                               </div> 
+
+
+                                               <div class="countersContainers">
+
+                                                <p class="counterRightTexts" style="color: rgb(12, 12, 12);"> next overdose in </p>
+                                                <p class="countingDown" id="remaining-time-b" style="color: #FF5C20; font-weight: 900;"></p>
+
+                                               </div>
+                                               <div class="counterImagesContainer">
+                                                 <img src="static/images/syringe.webp" class="counterImages" id="syringeImage">
+                                                
+                                               </div>
+
+
+                                        </div>
+
+
+                                        <div class="groups" id="paycheck">
+                                                <div class="totalsContainers">
+                                                    <p class="counterLeftTexts" style="color: rgb(12, 12, 12); font-weight: 100">Paycheck to paycheck Americans</p>
+                                                    <p class="counterLeftTotals" style="color:rgb(85, 29, 72); font-weight: 900;" id="total-loops-c"> {{ total_c_loops }}</p>
+                                                </div>
+
+                                                <div class="countersContainers">
+                                                    <p class="counterRightTexts" style="color: rgb(12, 12, 12); "> next US citizen in </p>    
+                                                    <p class="countingDown" style="color:#FF5C20; font-weight: 900;" id="remaining-time-c">  {{ remaining_c_time }} </p>
+                                                </div>
+
+                                                <div class="counterImagesContainer">
+                                                    <img src="static/images/paycheck2.webp" class="counterImages" id="paycheckImage">
+                                                   
+                                                  </div>
+                                        </div>
+
+                                        <div class="groups" id="americanDream">
+                                                <div class="totalsContainers">
+                                                    <p class="counterLeftTexts" style="color: rgb(12, 12, 12); font-weight: 100">American Dream skeptics in the US</p>
+                                                    <p class="counterLeftTotals" style="color:rgb(85, 29, 72); font-weight: 900;" id="total-loops-h"> {{ total_h_loops }}</p>
+                                                </div>
+
+                                                <div class="countersContainers">
+                                                    <p class="counterRightTexts" style="color: rgb(12, 12, 12); "> next US citizen in </p>
+                                                    <p class="countingDown" style="color:#FF5C20; font-weight: 900;" id="remaining-time-h">  {{ remaining_h_time }} </p>
+                                                </div>
+                                                <div class="counterImagesContainer">
+                                                    <img src="static/images/sceptic2.webp" class="counterImages" id="scepticImage">
+                                                   
+                                                  </div>
+                                        </div>
+
+                                        <div class="groups" id="firearm">
+                                            <div class="totalsContainers">
+                                                <p class="counterLeftTexts" style="color: rgb(12, 12, 12); font-weight: 100">Firearm violence since 2014</p>
+                                                <p class="counterLeftTotals" style="color: rgb(85, 29, 72); font-weight: 900; " id="total-loops-e"> {{ total_e_loops }}</p>
+                                            </div>
+                                            <div class="countersContainers">
+                                                <p class="counterRightTexts" style="color: rgb(12, 12, 12); "> next violent event in </p>
+                                                <p class="countingDown" style="color:#FF5C20; font-weight: 900;" id="remaining-time-e">  {{ remaining_e_time }} </p>
+                                            </div>
+                                            <div class="counterImagesContainer">
+                                                <img id="firearmImage" class="counterImages" src="static/images/denemesilah.webp">
+                                            </div>
+                                        </div>
+
+                                    
+                                        <div class="groups" id="lower">
+                                            <div class="totalsContainers">
+                                                <p class="counterLeftTexts" style="color: rgb(12, 12, 12); font-weight: 100">Lower-income US citizens</p>
+                                                <p class="counterLeftTotals" style="color:rgb(85, 29, 72); font-weight: 900;" id="total-loops-i"> {{ total_i_loops }}</p>
+                                            </div>
+                                            <div class="countersContainers">
+                                                <p class="counterRightTexts" style="color: rgb(12, 12, 12); "> next US citizen in </p>
+                                                <p class="countingDown" style="color:#FF5C20; font-weight: 900;" id="remaining-time-i">  {{ remaining_i_time }} </p>
+                                            </div>
+                                            <div class="counterImagesContainer">
+                                                <img src="static/images/lower.webp" class="counterImages" id="syringeImage">
+                                               
+                                              </div>
+                                        </div>
+
+                                        
+                                        
+                                            
+                                    
+                                            
+                                       
+
+                                    </div>
+
+                                    <div class="lines2">
+                                        
+                                        <div class="groups" id="military">
+                                            
+                                            <div class="totalsContainers2">
+                                                
+                                                
+                                                    <p class="counterLeftTexts" style="color: rgb(12, 12, 12); font-weight: 100">US obesity 2023</p>
+                                                    <p class="counterLeftTotals" id="total-loops-j" style="color: rgb(85, 29, 72); font-weight: 900;"> Total loops: {{ total_j_loops }} </p>
+                                            </div>
+
+                                            <div class="countersContainers2">
+                                                
+                                                <p class="counterRightTexts" style="color: rgb(12, 12, 12);">next US citizen in </p>
+                                                <p class="countingDown" id="remaining-time-j" style="color:#FF5C20; font-weight: 900;"> {{ remaining_j_time }} </p>
+                                            
+                                            </div>
+                                            <div class="counterImagesContainer">
+                                                <img src="static/images/obesity.webp" class="counterImages" id="obesity">
+                                            </div>
+                                        
+                                        </div>
+
+                                        <div class="groups" id="militaryDepenses">
+                                               <div class="totalsContainers2">
+
+                                                <p class="counterLeftTexts" style="color: rgb(12, 12, 12); font-weight: 100;">US Military Depenses since 2000</p>
+                                                <p class="counterLeftTotals" id="total-loops-k" style="color: rgb(85, 29, 72); font-weight: 900;"> {{ total_k_loops }}</p>
+
+                                               </div> 
+
+
+                                               <div class="countersContainers2">
+
+                                                <p class="counterRightTexts" style="color: rgb(12, 12, 12);"> next 19$ depenses in </p>
+                                                <p class="countingDown" id="remaining-time-k" style="color: #FF5C20; font-weight: 900;"> {{ remaining_k_time }}</p>
+
+                                               </div>
+                                               <div class="counterImagesContainer">
+                                                 <img src="static/images/militarydepenses.webp" class="counterImages" id="militarydepenses">
+                                                
+                                               </div>
+
+
+                                        </div>
+
+
+                                        <div class="groups" id="ccdebt">
+                                                <div class="totalsContainers2">
+                                                    <p class="counterLeftTexts" style="color: rgb(12, 12, 12); font-weight: 100">Us citizens Credit Card debt 2023</p>
+                                                    <p class="counterLeftTotals" style="color:rgb(85, 29, 72); font-weight: 900;" id="total-loops-l"> {{ total_l_loops }}</p>
+                                                </div>
+
+                                                <div class="countersContainers2">
+                                                    <p class="counterRightTexts" style="color: rgb(12, 12, 12); "> next 640$ expenses in </p>    
+                                                    <p class="countingDown" style="color:#FF5C20; font-weight: 900;" id="remaining-time-l">  {{ remaining_l_time }} </p>
+                                                </div>
+
+                                                <div class="counterImagesContainer">
+                                                    <img src="static/images/ccdebtleft.webp" class="counterImages" id="ccdebtleftImage">
+                                                   
+                                                  </div>
+                                        </div>
+
+                                        <div class="groups" id="healthCost">
+                                                <div class="totalsContainers2">
+                                                    <p class="counterLeftTexts" style="color: rgb(12, 12, 12); font-weight: 100">Health cost per capita 2023</p>
+                                                    <p class="counterLeftTotals" style="color:rgb(85, 29, 72); font-weight: 900;" id="total-loops-m"> {{ total_m_loops }}</p>
+                                                </div>
+
+                                                <div class="countersContainers2">
+                                                    <p class="counterRightTexts" style="color: rgb(12, 12, 12); "> next 1$ increase in </p>
+                                                    <p class="countingDown" style="color:#FF5C20; font-weight: 900;" id="remaining-time-m">  {{ remaining_m_time }} </p>
+                                                </div>
+                                                <div class="counterImagesContainer">
+                                                    <img src="static/images/health.webp" class="counterImages" id="health">
+                                                   
+                                                  </div>
+                                        </div>
+                                        <div class="groups" id="mass">
+                                            <div class="totalsContainers2">
+                                                <p class="counterLeftTexts" style="color: rgb(12, 12, 12); font-weight: 100">Mass shootings since 2014</p>
+                                                <p class="counterLeftTotals" style="color:rgb(85, 29, 72); font-weight: 900;" id="total-loops-f"> {{ total_f_loops }}</p>
+                                            </div>
+                                            <div class="countersContainers2">
+                                                <p class="counterRightTexts" style="color: rgb(12, 12, 12);"> next mass shooting in </p>
+                                                <p class="countingDown" style="color:#FF5C20; font-weight: 900;" id="remaining-time-f">  {{ remaining_f_time }} </p>
+                                            </div>
+                                            <div class="counterImagesContainer">
+                                                <img src="static/images/aim.webp" class="counterImages">
+                                               </div>
+                                        </div>
+                                        <div class="groups" id="suicides">
+                                            <div class="totalsContainers2">
+                                                <p class="counterLeftTexts" style="color: rgb(12, 12, 12); font-weight: 100">Suicides since 2000</p>
+                                                <p class="counterLeftTotals" style="color:rgb(85, 29, 72); font-weight: 900;" id="total-loops-g"> {{ total_g_loops }}</p>
+                                            </div>
+                                            <div class="countersContainers2">
+                                                <p class="counterRightTexts" style="color: rgb(12, 12, 12); "> next suicide in </p>
+                                                <p class="countingDown" style="color:#FF5C20; font-weight: 900;" id="remaining-time-g">  {{ remaining_g_time }} </p>
+
+                                            </div>
+                                            <div class="counterImagesContainer">
+                                                <img src="static/images/hangleft.webp" id="hang" class="counterImages">
+                                            </div>
+                                        </div>
+
+                                            
+                                    
+                                            
+                                       
+
+                                    </div>
+
+
+                                    
+
+                                    
+
+
+                                </div>
+
+
+                                <div id="counterLastPart">
+                                    <div id="legend">
+                                        <div id="explanationReferenceContainer">
+                                            <div id="explanationTitle">
+                                                Disclaimer
+                                            </div>
+                                            <div id="explanation">The statistics and countdowns shown here are approximative forecasts derived from calculations based on collected data. Striving for accuracy, it's essential to note that these forecasts might contain inaccuracies or slight variations due to the dynamic nature of the data involved.
+                                                The primary goal is to provide users with a snapshot of general trends related to the values being tracked. The countdowns are designed to give an estimate of when an event or milestone might occur based on the available information. However, users should consider these predictions as informed estimates rather than precise guarantees.
+                                            </div>
+                                            
+                                            <div id="referencesTitle">
+                                                References
+                                            </div>
+                                            <div id="references">American Foundation for Suicide Prevention; Business Insider; Center for Disease Control and Prevention; Congressional Research Service; Economic Research FRED ST. Louis FED; Emmanuel Saez / Gabriel Zuchman "Wealth Inequality in the United States Since 1913"; Gun Violence Archive; Mother Jones; Mass Shooting Tracker Site; National Allicance to End Homelessness; National Institutes of Health; National Institute on Drug Abuse; NSC Injury Facts; Pew Research Center; Statista; USA Facts; United States Census Bureau; USA Facts; YouGov US.        
+                                            
+                                            </div>
+                                            <div id="songCreditsTitle">
+                                                Audio Credits
+                                            </div>
+                                            <div id="song">
+                                                Manu Chao / Rainin In Paradise
+                                            </div>
+                                        </div>    
+                                    </div>
+                                    <div id="counterReactions">
+                                        
+                                                <div class="reactionContainer">
+                                                    <button class="reactionsButtons" data-reaction-type="sad">
+                                                        
+                                                            <img src="static/images/sad.webp" class="countdownIcons" id="sadIcon">
+                                                            <div class="reactionstexts">
+                                                                Sad but true.
+                                                            </div>
+                                                    </button>
+                                                    <div class="reactions">
+                                                        <div class="reactionsNumbers" id="totalSad">
+                                                        {{ total_sad }}
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+
+
+                                                <div class="reactionContainer">
+                                                    <button class="reactionsButtons" data-reaction-type="dislike">
+                                                        
+                                                            <img src="static/images/dislike.webp" class="countdownIcons" id="dislikeIcon">
+                                                            <div class="reactionstexts">
+                                                                Nah, didn't like it.
+                                                            </div>
+                                                    </button>
+                                                    <div class="reactions">
+                                                        <div class="reactionsNumbers" id="totalDislike">
+                                                            {{ total_dislike }}
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                                <div class="reactionContainer">
+                                                    <button class="reactionsButtons" data-reaction-type="like">
+                                                        
+                                                            <img src="static/images/like.webp" class="countdownIcons" id="likeIcon">
+                                                            <div class="reactionstexts">
+                                                                I like it. Good work!
+                                                            </div>
+                                                    </button>
+                                                    <div class="reactions">
+                                                        <div class="reactionsNumbers" id="totalLike">
+                                                        {{ total_like }}
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+
+                                                 <div class="reactionContainer">
+                                                    <button class="reactionsButtons" data-reaction-type="angry">
+                                                        
+                                                            <img src="static/images/angry.webp" class="countdownIcons" id="angryIcon">
+                                                            <div class="reactionstexts">
+                                                                Anti-American progaganda!
+                                                            </div>
+                                                    </button>
+                                                    <div class="reactions">
+                                                        <div class="reactionsNumbers" id="totalAngry">
+                                                        {{ total_angry }}
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+
+                                                <div class="reactionContainer">
+                                                    <button class="reactionsButtons" data-reaction-type="denial">
+                                                        
+                                                            <img src="static/images/denial.webp" class="countdownIcons" id="denialIcon">
+                                                            <div class="reactionstexts">
+                                                                Just doom and gloom. US is great!
+                                                            </div>
+                                                    </button>
+                                                    <div class="reactions">
+                                                        <div class="reactionsNumbers" id="totalDenial">
+                                                        {{ total_denial }}
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+
+                                            
+                                                <!--one of the counter message does not appear even there is no hidden WEIRD
+                                                BUT it is working appropriately-->
+                                                <div id="counterMessageContainerMobile">
+                                                    <div id="counterMessage">
+                                                        {% if countermessage is not none %}
+                                                            {{ countermessage }}
+                                                        {% endif %}
+                                                    </div>
+                                                </div>    
+
+                                                                                   
+                                               
+                                        
+                                             
+
+                                    </div>
+                                </div>
+                                <div id="counterMessageContainer">
+                                    <div id="counterMessage">
+                                        {% if countermessage is not none %}
+                                            {{ countermessage }}
+                                        {% endif %}
+                                    </div>
+                                </div>    
+
+                               
+
+                                
+
+                            </div>
+                            
+                            
+
+                            
+                            
+                           
+                            
+                            
+                        </div>
+                           
+                    </div>
+            
+                    
+                    <div class="codeTextContainer">
+                         <div class="codeTitle">
+                            <h4>
+                            USA Countdown Clock
+                            </h4>
+                        </div>
+                        
+                       <br>
+                        
+                        <div class="codeDesc">
+                            <h5> Data related to events is collected from the sources listed at the bottom of the widget. First, the annual increase rate of these events has been calculated and then converted to a per-second increase rate. 
+
+                                <br><br>To embed the widget, copy the code below and paste it into the HTML page where you want it to appear. <br>
+                                Adjust the 'vh' value to fit your page's design.
+                            </h5>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div id="iframeContainerMain">
+                    <pre>
+                        <code>
+                            &lt;div id="frameContainer" style="position: relative; width: 100%; height: auto; margin: auto;"&gt;
+                                &lt;iframe id="iframe" style="width: 100%; height: 100vh;" src="https://akarsuu.dev/USACountdownClock"&gt;&lt;/iframe&gt;  
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+            
+
+      
+            
+
         
         <div id="webProjects">
             
@@ -150,7 +639,7 @@
 
                                             <div id="web6Right" class="webRight">
                                                 <div id="web6ImageContainer" class="webImageContainer">
-                                                    <a href="https://comprehensive-steps-302025.framer.app/en" target="_blank" id="kuslarLink">
+                                                    <a href="https://tahtakuslarethnographic.gallery/en.html" target="_blank" id="kuslarLink">
                                                     
                                                         <img class="webImages" id="web4" src="/static/images/tahta_kuslar_ethnographic_gallery.png" loading="lazy"  alt="Tahtakuslar Gallery site Cover">
          
@@ -349,290 +838,7 @@
         </div>
             
                <br>
-             <div id="anchor1"></div>
              
-            <!---------------------------codingPartStart-->
-
-                <div id="codeStaffTitle">
-                       <h2>Coding Stuff</h2>
-                   </div>
-            
-               <br><br>
-               
-               
-               
-               <div id="code1MainContainer">
-
-                                    <div id="code1Left">
-                        
-                                        <div id="code1ImageContainer">
-                                            
-                                             <img id="code1" src="static/images/orchestre.jpg" loading="lazy"  alt="drum kit code with music conductor">
-                                             
-                                        
-                                    
-                                        <div id="keysContainer">
-                                            
-                                            <div id="firstKeys" class="keys">
-                                                <div data-key="65" class="key" id="key1">
-                                                    <kbd class="keyLetters">A</kbd>
-                                                    <br>
-                                                    <span class="sound">CLAP                </span>
-                                                </div>
-                                                
-                                                <div data-key="83" class="key" id="key2">
-                                                    <kbd class="keyLetters">S</kbd>
-                                                    <br>
-                                                    <span class="sound">HIHEAD                </span>
-                                                </div>
-                                                
-                                                <div data-key="68" class="key" id="key3">
-                                                    <kbd class="keyLetters">D</kbd>
-                                                    <br>
-                                                    <span class="sound">KICK                </span>
-                                                </div>
-                                                
-                                                
-                                                <div data-key="70" class="key" id="key4">
-                                                    <kbd class="keyLetters">F</kbd>
-                                                    <br>
-                                                    <span class="sound">OPENHAT                </span>
-                                                </div>
-                                                
-                                                
-                                            </div>
-                                            
-                                            <br>
-                                            
-                                           
-                                            
-                                            <div id="secondKeys" class="keys">
-                                                <div data-key="71" class="key" id="key5">
-                                                    <kbd class="keyLetters">G</kbd>
-                                                    <br>
-                                                    <span class="sound">BOOM                </span>
-                                                </div>
-
-                                                 <div data-key="72" class="key" id="key6">
-                                                    <kbd class="keyLetters">H</kbd>
-                                                    <br>
-                                                    <span class="sound">RIDE                </span>
-                                                </div>
-                                                
-                                                 <div data-key="74" class="key" id="key7">
-                                                    <kbd class="keyLetters">J</kbd>
-                                                    <br>
-                                                    <span class="sound">SNARE                </span>
-                                                </div>
-                                                
-                                            </div>
-                                            <br>
-                                            
-                                            
-                                            <div id="thirdKeys" class="keys">
-                                                <div data-key="75" class="key" id="key8">
-                                                    <kbd class="keyLetters">K</kbd>
-                                                    <br>
-                                                    <span class="sound">TOM                </span>
-                                                </div>
-                                                
-                                                 <div data-key="76" class="key" id="key9">
-                                                    <kbd class="keyLetters">L</kbd>
-                                                    <br>
-                                                    <span class="sound">TINK                </span>
-                                                </div>
-                                                
-                                    
-                                                
-                                            </div>
-                                            
-                                            
-                                        </div>
-                                           
-                                                
-                                               
-                                                
-  
-                                        
-                                        </div>
-                        
-                                    </div>
-                                    <br>
-                                    
-                                    
-                                    <div id="code1Right">
-                                         <div id="code1Title">
-                                            <h4>
-                                            001 Drum Kit
-                                            </h4>
-                                        </div>
-                                        
-                                       <br>
-                                        
-                                        <div id="code1Desc">
-                                            <h5>
-                                            This is a simple drum kit for desktops. To enjoy, use your KEYBOARD and hit the relative keys (A, S, D, F, G, H, J, K and L) to trigger the audio samples. Stuff coded with Wes' guidance on his tutorial website.
-                                            </h5>
-                                        </div>
-                                       
-                                    </div>
-                </div>
-                    
-                
-                <div id="code2MainContainer">
-
-                    <div id="code2Left">
-    
-                        <div id="code2ImageContainer">
-                        
-                            <div id="firstClockLine">
-                                
-                                <div id="leftTopContainer" class="clockContainers">
-                                    <div id="firstClock" class="clocks">
-                                        <div class="clockFace">
-                                            <div class="hand hour-hand" id="handHour"></div>
-                                            <div class="hand min-hand" id="handMinute"></div>
-                                            <div class="hand second-hand" id="handSecond"></div>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div id="firstClockLegend" class="legend">PETERSBURG</div>
-                                </div>
-                                
-                                <div></div>
-                                
-                                <div id="rightTopContainer" class="clockContainers">
-                                    <div id="secondClock" class="clocks">
-                                        <div class="clockFace">
-                                            <div class="hand hour-hand2" id="handHour"></div>
-                                            <div class="hand min-hand2" id="handMinute"></div>
-                                            <div class="hand second-hand2" id="handSecond"></div>
-                                            
-                                        </div>
-                                        
-                                        
-                                    </div>
-                                    <div id="secondClockLegend" class="legend">BAMAKO</div>
-                                </div>
-                               
-                            </div>
-                            
-                            
-                            <div id="secondClockLine">
-                                
-                                <div id="leftBottomContainer" class="clockContainers">
-                                    <div id="thirdClock" class="clocks"> 
-                                        <div class="clockFace">
-                                            <div class="hand hour-hand3" id="handHour"></div>
-                                            <div class="hand min-hand3" id="handMinute"></div>
-                                            <div class="hand second-hand3" id="handSecond"></div>
-                                            
-                                        </div>
-                                    </div>
-                                       
-                                    <div id="thirdClockLegend" class="legend">HO CHI MINH</div>
-                                </div>
-                                
-                                <div id="rightBottomContainer" class="clockContainers">
-                                    <div id="fourthClock" class="clocks">
-                                        <div class="clockFace">
-                                            
-                                            <div class="hand hour-hand4" id="handHour"></div>
-                                            <div class="hand min-hand4" id="handMinute"></div>
-                                            <div class="hand second-hand4" id="handSecond"></div>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div id="fourthClockLegend" class="legend">HAVANA</div>
-                                </div>
-                                
-                                
-                                
-                            </div>
-                             
-                        </div>    
-                        
-                    </div>
-    
-
-                    <br>
-                
-                    <div id="code2Right">
-                        <div id="code2Title">
-                            <h4>
-                            002 Time Set
-                            </h4>
-                        </div>
-                        
-                       <br>
-                        
-                        <div id="code2Desc">
-                            <h5>
-                            Coded with "moment" and "time-zone" JavaScript libraries. The formula is "(time unit / 60) * 360 degrees" for both seconds and minutes. For hours, the formula is set to 12.
-
-
-
-</h5>
-                        </div>
-                       
-                    </div>
-            </div>
-          
-                <div id="code3MainContainer">
-
-                                    <div id="code3Left">
-                        
-                                        <div id="code3ImageContainer">
-                                    
-                                            
-                                                <div id="heart" class="heart">
-                                                    
-                                                </div>
-                                                <div id="likeCount">
-                                                    {{totalLike}} likes
-                                                </div>
-                                                
-                                                <div id="message">
-                                                    {{message}}
-                                                </div>
-                                                
-                                                <button id="likeButton">
-                                                    Like
-                                                </button>
-                                            
-                                            
-
-                                            
-                                            
-                                           
-                                            
-                                            
-                                        </div>
-                                           
-                                    </div>
-                            
-                                    
-                                    <div id="code3Right">
-                                         <div id="code1Title">
-                                            <h4>
-                                            003 Anonymous Liking
-                                            </h4>
-                                        </div>
-                                        
-                                       <br>
-                                        
-                                        <div id="code3Desc">
-                                            <h5>
-                                            No authentification is needed. Just hit the "like" to increase the likes. However, you cannot like more than once unless you change your IP. Frontend: JavaScript; Backend: Python/Flask and SqlAlchemy.
-                                            </h5>
-                                        </div>
-                                       
-                                    </div>
-                </div>
-            
-            
                 
             
             
@@ -655,7 +861,32 @@
                         <img id="github" src="static/images/githubLogo.png">
                     </a>
                 </div>
-            </div>        
+               
+               
+                <div id="heartLikeContainer">
+                    
+                            
+                   
+                        
+                    
+                    <div id="likeCount">
+                        {{totalLike}} likes
+                    </div>
+                    
+                    <div id="message">
+                        {{message}}
+                    </div>
+                    
+                    <button id="likeButton">
+                        Like
+                    </button>
+                </div>
+                  
+                
+                
+            </div>
+                
+               
             
             
      
@@ -666,45 +897,219 @@
         <br>
 
 
-        
        
-       <audio data-key="65" loading="lazy"  src="../static/sounds/clap.wav"></audio>
-       <audio data-key="83" loading="lazy"  src="../static/sounds/hihat.wav"></audio>
-       <audio data-key="68" loading="lazy"  src="../static/sounds/kick.wav"></audio>
-       <audio data-key="70" loading="lazy"  src="../static/sounds/openhat.wav"></audio>
-       <audio data-key="71" loading="lazy"  src="../static/sounds/boom.wav"></audio>
-       <audio data-key="72" loading="lazy"  src="../static/sounds/ride.wav"></audio>
-       <audio data-key="74" loading="lazy"  src="/static/sounds/snare.wav"></audio>
-       <audio data-key="75" loading="lazy"  src="../static/sounds/tom.wav"></audio>
-       <audio data-key="76" loading="lazy"  src="../static/sounds/tink.wav"></audio>
-       
-       
-<script>
-     
-    function playSound(e) {
-        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-        const key =  document.querySelector(`.key[data-key="${e.keyCode}"]`);
-        if(!audio) return; //stop the function
+  
+       <script> //audio player 
+       document.addEventListener('DOMContentLoaded', function () {
+    const audioToggle = document.getElementById('audioToggle');
+    const checkbox = audioToggle.querySelector('input[type="checkbox"]');
+    const audio = new Audio('static/manuChao/raining.mp3');
+
+    checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+            // Play the MP3 file in response to a user gesture
+            audio.play().catch(function (error) {
+                console.error('Play error:', error);
+            });
+        } else {
+            // Pause or stop playback
+            audio.pause();
+            audio.currentTime = 0; // Reset playback to the beginning
+        }
+    });
+});
+    </script>
+
+
+<script> //INCREASE TOTAL BY CLCIK
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.reactionsButtons');
+        const totalLikeElement = document.getElementById('totalLike'); 
+        const totalDislikeElement = document.getElementById('totalDislike');
+        const totalSadElement = document.getElementById('totalSad'); 
+        const totalAngryElement = document.getElementById('totalAngry');
+        const totalDenialElement = document.getElementById('totalDenial');
+        const counterMessageElement = document.getElementById('counterMessage')
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                const reactionType = this.getAttribute('data-reaction-type');
+                sendReaction(reactionType);
+            });
+        });
+
+        function sendReaction(reactionType) {
+            fetch('/countdownVotes', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ reaction_type: reactionType }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.countermessage);
+                console.log(data)
+                // Update the corresponding total count element based on the reaction type
+                switch (reactionType) {
+                    case 'like':
+                        totalLikeElement.textContent = data.totalLike;
+                        break;
+                    case 'dislike':
+                        totalDislikeElement.textContent = data.totalDislike;
+                        break;
+                    case 'sad':
+                        totalSadElement.textContent = data.totalSad;
+                        break;
+                    case 'angry':
+                        totalAngryElement.textContent = data.totalAngry;
+                        break;
+                    case 'denial':
+                        totalDenialElement.textContent = data.totalDenial;
+                        break;
+                    // Add other cases if needed
+                }
+                counterMessageElement.textContent = data.countermessage;
+                // Handle the response as needed
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Handle errors
+            });
+        }
         
-        
-        audio.play();
-        audio.currentTime = -3;
-        key.classList.add("playing");
-        
-    }
-    
-    function removeTransition(e){
-        if(e.propertyName !== "transform" && keydown === false) return; //skip if not a transform
-        this.classList.remove("playing");
-        
-    }
-    
-    const keys = document.querySelectorAll('.key');
-    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-window.addEventListener('keydown', playSound);
+    });
 </script>
 
-        
+
+
+
+       <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      
+      <script>
+          function formatTimeForDisplay(timeString) {
+            
+            
+    return timeString;
+}
+ 
+
+
+
+         function timeStringToSeconds(timeString) {
+    console.log('received time string:', timeString);
+
+    const components = (timeString || '0:0:0').split(':').map(Number);
+    const [hours, minutes, seconds] = components.slice(-3);
+    console.log('formatted values - hours:', hours, 'minutes:', minutes, 'seconds:', seconds);
+
+    return hours * 3600 + minutes * 60 + seconds;
+}
+
+
+
+        function formatNumber(number) {
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+           // Function to update countdown data
+           function updateCountdownData() {
+               $.ajax({
+                   url: '/countdown-data',  // Flask route to get countdown data
+                   type: 'GET',
+                   dataType: 'json',
+                   success: function (data) {
+
+
+
+
+
+
+                       $('#remaining-time-d').html(data.remaining_time_d);
+                       $('#total-loops-d').html(data.total_loops_d);
+
+
+                       const remainingTimeB = data.remaining_time_b;
+                       const formattedTimeB = formatTimeForDisplay(remainingTimeB).replace(/^0:/, '');
+                       $('#remaining-time-b').html(formattedTimeB);
+                       const formattedTotalLoopsB = formatNumber(data.total_loops_b);
+                       $('#total-loops-b').html(formattedTotalLoopsB);
+
+                       const remainingTimeC = data.remaining_time_i;
+                       const formattedTimeC = formatTimeForDisplay(remainingTimeC).replace(/^0:/, '');  // Removes the leading "0:"
+                       $('#remaining-time-c').html(formattedTimeC);
+                       const formattedTotalLoopsC = formatNumber(data.total_loops_c);
+		               $('#total-loops-c').html(formattedTotalLoopsC);
+
+                       const remainingTimeE = data.remaining_time_e;
+                       const formattedTimeE = formatTimeForDisplay(remainingTimeE).replace(/^0:/, '');
+                       $('#remaining-time-e').html(formattedTimeE);
+                       const formattedTotalLoopsE = formatNumber(data.total_loops_e);
+		               $('#total-loops-e').html(formattedTotalLoopsE);
+
+                       $('#remaining-time-f').html(formatTimeForDisplay(data.remaining_time_f));
+                       const formattedTotalLoopsF = formatNumber(data.total_loops_f)
+		               $('#total-loops-f').html(formattedTotalLoopsF);
+                       
+                       const remaininggTimeG = data.remaining_time_g;
+                       const formattedTimeG = formatTimeForDisplay(remaininggTimeG).replace(/^0:/, '');
+                       $('#remaining-time-g').html(formattedTimeG);
+                       const formattedTotalLoopsG = formatNumber(data.total_loops_g);
+		               $('#total-loops-g').html(formattedTotalLoopsG);
+                       
+                       
+                       $('#remaining-time-h').html(formatTimeForDisplay(data.remaining_time_h));
+                       const formattedTotalLoopsH = formatNumber(data.total_loops_h);
+		               $('#total-loops-h').html(formattedTotalLoopsH);
+                       
+                       const remainingTimeI = data.remaining_time_i;
+                       const formattedTimeI = formatTimeForDisplay(remainingTimeI).replace(/^0:/, '');  // Removes the leading "0:"
+                       $('#remaining-time-i').html(formattedTimeI);
+                       const formattedTotalLoopsI = formatNumber(data.total_loops_i);
+		               $('#total-loops-i').html(formattedTotalLoopsI);
+
+                       const remainingTimeJ = data.remaining_time_j;
+                       const formattedTimeJ = formatTimeForDisplay(remainingTimeJ).replace(/^0:/, '');
+                       $('#remaining-time-j').html(formattedTimeJ);
+                       const formattedTotalLoopsJ = formatNumber(data.total_loops_j);
+                       $('#total-loops-j').html(formattedTotalLoopsJ);
+
+                       const remainingTimeK = data.remaining_time_k;
+                       const formattedTimeK = formatTimeForDisplay(remainingTimeK).replace(/^0:/, '');
+                       $('#remaining-time-k').html(formattedTimeK);
+                       const formattedTotalLoopsK = formatNumber(data.total_loops_k);
+                       $('#total-loops-k').html(formattedTotalLoopsK);
+
+                       const remainingTimeL = data.remaining_time_l;
+                       const formattedTimeL = formatTimeForDisplay(remainingTimeL).replace(/^0:/, '');
+                       $('#remaining-time-l').html(formattedTimeL);
+                       const formattedTotalLoopsL = formatNumber(data.total_loops_l);
+                       $('#total-loops-l').html(formattedTotalLoopsL);
+
+                       const remainingTimeM = data.remaining_time_m;
+                       const formattedTimeM = formatTimeForDisplay(remainingTimeM).replace(/^0:/, '');
+                       $('#remaining-time-m').html(formattedTimeM);
+                       const formattedTotalLoopsM = formatNumber(data.total_loops_m);
+                       $('#total-loops-m').html(formattedTotalLoopsM);
+
+
+
+
+                   },
+
+                   
+                   complete: function () {
+                       // Schedule the next update after a delay (e.g., 1000 milliseconds)
+                       setTimeout(updateCountdownData, 1000);
+                   }
+               });
+           }
+
+           
+           // Initial call to start updating countdown data
+           updateCountdownData();
+       </script>
+
+
 <script>
     
     window.onscroll = function() {
@@ -717,134 +1122,6 @@ window.addEventListener('keydown', playSound);
     
 </script>
 
-
-
-<script>
-
-    const secondHand = document.querySelector('.second-hand');
-    const minHand = document.querySelector('.min-hand');
-    const hourHand = document.querySelector('.hour-hand');
-    
-    function setDateFirstClock(){
-
-        moment.tz.add("Europe/Saint_Petersburg|MSK MSK MSK|-c0 -c0 -c0|01020|1BWp0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00");
-        const now = moment().tz('Europe/Moscow');
-        
-        const hour = now.hour();
-        const minute = now.minute();
-        const second = now.second();
-        console.log(`The time in Petersburg is ${hour}:${minute}:${second}`);
-        
-        const secondsDegrees = ((second / 60)*360);
-        secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-        
-        const minutesDegrees = ((minute / 60)*360) ;
-        minHand.style.transform = `rotate(${minutesDegrees}deg)`;
-        
-        const hoursDegrees = ((hour / 12)*360);
-        hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
-        
-        
-    }
-    
-    setInterval(setDateFirstClock, 1000); 
-
-</script>
-
-<script>            
-
-
-    const secondHand2 = document.querySelector('.second-hand2');
-    const minHand2 = document.querySelector('.min-hand2');
-    const hourHand2 = document.querySelector('.hour-hand2');
-    
-    function setDateSecondClock(){
-
-        moment.tz.add('Africa/Bamako|GMT GMT|0 -10|0101010101010101010101010101010101010101010101010|1LHA0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Rd0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Op0 1zb0 Rd0 1zb0 Op0');
-        const now = moment().tz('Africa/Bamako');
-        const hour = now.hour();
-        const minute = now.minute();
-        const second = now.second();
-        console.log(`The time in Bamako is ${hour}:${minute}:${second}`);
-        
-        const secondsDegrees = ((second / 60)*360);
-        secondHand2.style.transform = `rotate(${secondsDegrees}deg)`;
-        
-        const minutesDegrees = ((minute / 60)*360) ;
-        minHand2.style.transform = `rotate(${minutesDegrees}deg)`;
-        
-        const hoursDegrees = ((hour / 12)*360);
-        hourHand2.style.transform = `rotate(${hoursDegrees}deg)`;
-        
-        
-    }
-    
-    setInterval(setDateSecondClock, 1000); 
-    
-</script>
-
-<script>
-
-    const secondHand3 = document.querySelector('.second-hand3');
-    const minHand3 = document.querySelector('.min-hand3');
-    const hourHand3 = document.querySelector('.hour-hand3');
-    
-    function setDateThirdClock(){
-
-        const now = moment().tz('Asia/Ho_Chi_Minh');
-        const hour = now.hour();
-        const minute = now.minute();
-        const second = now.second();
-        console.log(`The time in Ho Chi Minh is ${hour}:${minute}:${second}`);
-        
-        const secondsDegrees = ((second / 60)*360);
-        secondHand3.style.transform = `rotate(${secondsDegrees}deg)`;
-        
-        const minutesDegrees = ((minute / 60)*360) ;
-        minHand3.style.transform = `rotate(${minutesDegrees}deg)`;
-        
-        const hoursDegrees = ((hour / 12)*360);
-        hourHand3.style.transform = `rotate(${hoursDegrees}deg)`;
-        
-        
-    }
-    
-    setInterval(setDateThirdClock, 1000); 
-    
-</script>
-
-<script>
-
-    const secondHand4 = document.querySelector('.second-hand4');
-    const minHand4 = document.querySelector('.min-hand4');
-    const hourHand4 = document.querySelector('.hour-hand4');
-    
-    function setDateFourthClock(){
-        moment.tz.add("America/Argentina/Rosario|ART ART ART|-3i.g -20 -3u -3i.g -20 -3u|01212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212121212");
-
-
-
-        const now = moment().tz("America/Havana");
-
-        const hour = now.hour();
-        const minute = now.minute();
-        const second = now.second();
-        console.log(`The time in Rosario is ${hour}:${minute}:${second}`);
-        
-        const secondsDegrees = ((second / 60)*360);
-        secondHand4.style.transform = `rotate(${secondsDegrees}deg)`;
-        
-        const minutesDegrees = ((minute / 60)*360) ;
-        minHand4.style.transform = `rotate(${minutesDegrees}deg)`;
-        
-        const hoursDegrees = ((hour / 12)*360);
-        hourHand4.style.transform = `rotate(${hoursDegrees}deg)`;
-        
-        
-    }
-    
-    setInterval(setDateFourthClock, 1000); 
-</script>
 
 <script>
 var likeButton = document.getElementById('likeButton');
