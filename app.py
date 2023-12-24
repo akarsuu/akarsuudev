@@ -11,7 +11,7 @@ app = Flask (__name__,
             static_url_path='',
             static_folder='../static')
 CORS(app)
-app.config['SECRET_KEY'] = 'bu_da_mon_secret_key_phrase_im'
+app.config['SECRET_KEY'] = ''
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///likes.db'
 
 
