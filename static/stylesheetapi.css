@@ -1,0 +1,711 @@
+*{
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    position: relative;
+    margin: 0;
+   
+
+}
+
+#mass-shooting-widget{
+    width:100%;
+    background-color: rgb(222, 223, 224);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Questrial', sans-serif;
+    padding:5px;
+    margin: auto;
+    border-radius: 20px;
+    margin: 0;
+
+}
+
+#mass-shooting-widget{
+    overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    scrollbar-width: thin;
+  
+/* Track */
+scrollbar-color: #f1f1f1 #888;
+
+/* Handle on hover */
+scrollbar-color: #f1f1f1 #555;
+
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  
+#counterHeader{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#counterTitle{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 300;
+    color:rgb(87, 45, 77);
+
+}
+h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 300;
+    color:rgb(87, 45, 77);
+
+}
+
+
+#counterSubTitle{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    color:rgb(87, 45, 77);
+    padding-top: 15px;
+
+
+}
+
+
+#toggleContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(214, 215, 216);
+    padding:10px 15px 10px 15px;
+    border-radius: 20px;
+    
+}
+
+#togleOn{
+    margin-top: 6px;
+    padding-left: 3px;
+    font-size: 11px;
+    color: #FF5C20;
+    letter-spacing: 0.7px;
+    font-weight: 700;
+
+}
+
+#togleOff{
+    margin-top: 6px ;
+    padding-right: 3px;
+    font-size: 11px;
+    color: rgb(85, 29, 72);
+    letter-spacing: 0.7px;
+    font-weight: 600;
+
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(87, 45, 77);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color:  #FF5C20;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #FF5C20;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 22px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+#counterSecondBand{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 100%;
+    background-color: none;
+    padding-top: 10px;
+
+}
+
+.lines{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: right;
+    background-color: none;
+    text-align: right;
+    padding-left: 2%;
+    padding-right: 2%;
+
+}
+
+
+.lines2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: right;
+    background-color: none;
+    text-align: left;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+
+.groups{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top:10px;
+    
+}
+
+
+
+.totalsContainers{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.totalsContainers2{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.countersContainers{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.countersContainers2{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+ .counterLeftTexts{
+    margin-top: 3px;
+    padding-right: 1px;
+    letter-spacing: 0.7px;
+    background-color: #dacfd9;
+    font-size: 14px;
+}
+.counterLeftTotals{
+    margin-left:3px;
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+.counterRightTexts{
+    margin-top: 3px;
+    padding-left: 2px;
+    letter-spacing: 0.8px;
+    background-color: #eff1f8;
+    font-size: 14px;
+}
+
+.countingDown{
+    margin-left:3px;
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+
+.countdownIcons{
+    width:50px;
+    height: auto;
+}
+
+/*****************COUNTER LAST PART*******************/
+#counterLastPart{
+    background-color: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/*******REACTIONS SECTION****************/
+#counterReactions{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: none;
+    margin: auto;
+    padding-top: 1%;
+    padding-left: 1.9%;
+    padding-bottom:1%;
+}
+ 
+
+.reactionContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: none;
+    justify-content: left;
+    padding-top:1%;
+    padding-bottom: 1%;
+
+    
+
+    }
+
+.reactionsButtons{
+    display: flex;
+    flex-direction: row;
+    padding-left:3px;
+    padding-right: 30px;
+    border-radius: 30px;
+    background-color: white;
+    font-family: 'Questrial', sans-serif;
+    font-size:14px;
+    color:rgb(87, 45, 77);
+    vertical-align: middle;
+    border: 1px solid;
+    border-color:#5C7562;
+    cursor: pointer;
+}
+
+
+.reactionsButtons:hover{
+    background-color: rgb(225, 225, 228);
+    border: 1px solid;
+    border-color:#313732;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.reactionsButtons:active{
+    background-color: rgb(225, 225, 228); /* Change background color when clicked */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.reactionstexts{
+    margin: auto;
+    padding-left: 5px;
+}
+
+.reactions{
+    font-family:'Questrial', sans-serif;
+    color:rgb(87, 45, 77);
+    font-size: 30px;
+    font-weight: 800;
+    background-color: none;
+    padding-left: 5px;
+    display: flex;
+}
+
+.reactionsNumbers{
+    margin: auto;
+}
+
+/**********COUNTER IMAGES*************/
+.counterImagesContainer{
+    margin-top:3px;
+}
+.counterImages{
+    width:70px;
+    height: auto;
+}
+
+
+#legend{
+    display: flex;
+    flex-direction: column;
+    background-color:none;
+    width: 50%;
+    justify-content: space-around;
+}
+
+#explanationReferenceContainer{
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    padding-right: 3%;
+    padding-left:25%;
+    text-align: right;
+    
+}
+#explanationTitle{
+    font-size: 14;
+    color:rgb(87, 45, 77);
+    font-weight: 100;
+    line-height: 18px;
+}
+
+#explanation{
+    margin-top: 3px;
+    padding-top: 3px;
+    display: flex;
+    justify-content: left;
+    font-size: 12px;
+    color:rgb(87, 45, 77);
+    font-weight: 100;
+    line-height: 18px;
+}
+
+#referencesTitle{
+    font-size: 14;
+    color:rgb(87, 45, 77);
+    font-weight: 100;
+    line-height: 18px;
+    padding-top: 10px;
+}
+
+#references{    
+    display: flex;
+    justify-content: left;
+    padding-top:3px;
+    font-size: 12px;
+    color:rgb(87, 45, 77);
+    font-weight: 100;
+    line-height: 18px;
+}
+
+#songCreditsTitle{
+    font-size: 14;
+    color:rgb(87, 45, 77);
+    font-weight: 100;
+    line-height: 18px;
+    padding-top: 10px;
+}
+
+#song{
+    padding-top:3px;
+    font-size: 12px;
+    color:rgb(87, 45, 77);
+    font-weight: 100;
+    line-height: 18px;
+}
+/*Strange but the html div does not work!!!***********
+#counterMessageContainer{
+    width:100%;
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    background-color: #9fafa6;
+}
+***/
+#counterMessageContainerMobile{
+    width:100%;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    margin-top: 4%;
+}
+#counterMessage{
+    background-color: none;
+    display: flex;
+    font-size: 24px;
+    margin-left: 5px;
+    color:rgb(87, 45, 77);
+}
+#apiSignatureContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
+    color:rgb(87, 45, 77);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#apiSignature{
+    font-size: 12px;
+    margin-top: 5px;
+
+}
+
+a {
+    color:#FF5C20;
+    font-weight: 700;
+    text-decoration: none;
+    
+}
+
+
+
+@media (max-width:1200px) and (min-width:1px) {
+   
+
+    
+    #counterSecondBand{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 100%;
+        background-color: none;
+        padding-top: 10px;
+    }
+
+        
+    .lines{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        justify-content: center;
+        background-color: none;
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    
+    }
+    
+    .lines2{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        justify-content: center;
+        background-color: none;
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    
+    .groups{
+        padding-top: 10px;
+        padding-bottom: 3px;
+        margin-top:10px;
+        background-color: rgb(204, 206, 208);
+        border-radius: 20px;
+
+        
+        
+    }
+    
+    
+    .totalsContainers{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .totalsContainers2{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        width: fit-content;
+        margin: auto;
+    }
+
+
+    .countersContainers{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin: auto;
+    }
+    .countersContainers2{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        margin: auto;
+    }
+    
+    
+ .counterLeftTexts{
+    margin-top: 3px;
+    letter-spacing: 0.7px;
+    background-color: #dacfd9;
+    font-size: 18px;
+    width: fit-content;
+    margin: auto;
+    
+}
+.counterLeftTotals{
+    margin-left:0px;
+    margin-top: 9px;
+    font-size: 30px;
+    margin: auto;
+}
+
+.counterRightTexts{
+    margin-top: 5px;
+    padding-left: 0px;
+    letter-spacing: 0.8px;
+    background-color: #eff1f8;
+    font-size: 18px;
+    width: fit-content;
+    margin: auto;
+}
+
+.countingDown{
+    margin-left:0px;
+    font-size: 30px;
+    margin: auto;
+    padding-top: 5px;
+}
+
+.counterImages{
+    width:120px;
+    height: auto;
+    margin: auto;
+}
+#paycheckImage{
+    margin-left:-44px;
+}
+#scepticImage{
+    margin-left: -6px;
+}
+
+#obesity{
+    margin-left:40px;
+}
+
+#health{
+    margin-left:10px;
+}
+
+#hang{
+    margin-left: 43px;
+}
+
+#counterLastPart{
+    background-color: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#counterReactions{
+    order:1;
+    width:100%;
+    margin-top:10px;
+}
+
+.reactionsButtons{
+    display: flex;
+    flex-direction: row;
+    padding-left:3px;
+    padding-right: 10px;
+    border-radius: 30px;
+    background-color: white;
+    font-family: 'Questrial', sans-serif;
+    font-size:14px;
+    color:rgb(87, 45, 77);
+    vertical-align: middle;
+    border: 1px solid;
+    border-color:#5C7562;
+    cursor: pointer;
+}
+
+
+#legend{
+    flex-direction: column;
+    background-color:none;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 1%;
+    order:2;
+}
+#explanationReferenceContainer{
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 3%;
+    padding-left:3%;
+    text-align: center;
+    
+}
+
+#apiSignatureContainer{
+    padding-top: 5%;
+}
+
+
+
+}
