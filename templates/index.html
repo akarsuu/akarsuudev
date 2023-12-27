@@ -1034,7 +1034,7 @@
                        const formattedTotalLoopsB = formatNumber(data.total_loops_b);
                        $('#total-loops-b').html(formattedTotalLoopsB);
 
-                       const remainingTimeC = data.remaining_time_i;
+                       const remainingTimeC = data.remaining_time_c;
                        const formattedTimeC = formatTimeForDisplay(remainingTimeC).replace(/^0:/, '');  // Removes the leading "0:"
                        $('#remaining-time-c').html(formattedTimeC);
                        const formattedTotalLoopsC = formatNumber(data.total_loops_c);
