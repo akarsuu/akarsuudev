@@ -1,26 +1,41 @@
-from flask import Flask, url_for, render_template, request, jsonify
+from flask import Flask, redirect, url_for, render_template, request, jsonify, redirect, session
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime, timedelta
 from sqlalchemy import func
 from flask_cors import CORS
 import threading
+from flask_session import Session
+import random
 import time
+from fr202 import fr202_bp, question_list, initialize_session
+from fr201 import fr201_bp, question_list, initialize_session
+import logging
+from logging.handlers import RotatingFileHandler
 
 
 app = Flask (__name__,
             static_url_path='',
             static_folder='../static')
+
+app.config['SECRET_KEY'] = "billykid"
+app.config['SESSION_TYPE'] = "filesystem"
+app.register_blueprint(fr202_bp)
+app.register_blueprint(fr201_bp)
+print("BP registered successfully")
+Session(app)
+
+
 CORS(app)
-app.config['SECRET_KEY'] = ''
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///likes.db'
 
 
 app.config['SQLALCHEMY_BINDS'] = {
     'countingDB': 'sqlite:///countingDB.db',
-    'countingReaction' : 'sqlite:///countingReaction.db'
+    'countingReaction' : 'sqlite:///countingReaction.db',
 }
 
 db = SQLAlchemy(app)
+
 
 #db model definition
 class Likes(db.Model):
@@ -33,7 +48,7 @@ class Likes(db.Model):
 class Countdown(db.Model):
     __bind_key__ = 'countingDB'
     id = db.Column(db.Integer, primary_key=True)
-    countdown_seconds_a = db.Column(db.Integer, default=timedelta(days=200).total_seconds)
+    countdown_seconds_a = db.Column(db.Integer, default=timedelta(days=97).total_seconds())
     total_a = db.Column(db.Integer, default=20)
     countdown_seconds_b = db.Column(db.Integer, default=timedelta(seconds=788).total_seconds)
     total_b = db.Column(db.Integer, default=401468)
@@ -78,7 +93,9 @@ class CountdownReaction(db.Model):
     total_denial = db.Column(db.Integer, default=0)
     
 
-
+class LoginCounter(db.Model):
+    id= db.Column(db.Integer, primary_key=True)
+    count = db.Column(db.Integer, default=0)
 
 
 with app.app_context():
@@ -102,8 +119,12 @@ def countdown_generic(countdown_attr, total_attr, initial_seconds, default_total
             if countdown_seconds > 0:
                 setattr(countdown, countdown_attr, countdown_seconds -1)
             else:
-                setattr(countdown, countdown_attr, initial_seconds)
-                setattr(countdown, total_attr, getattr(countdown, total_attr) + (19 if countdown_attr == 'countdown_second_k' else (640 if countdown_attr == 'countdown_second_l' else 1)))
+                if countdown_attr == 'countdown_seconds_a':
+                    setattr(countdown, countdown_attr, timedelta(days=97).total_seconds())
+                    setattr(countdown, total_attr, default_total)
+                else:
+                    setattr(countdown, countdown_attr, initial_seconds)
+                    setattr(countdown, total_attr, getattr(countdown, total_attr) + (19 if countdown_attr == 'countdown_second_k' else (640 if countdown_attr == 'countdown_second_l' else 1)))
                 '''
                 setattr(countdown, total_attr, getattr(countdown, total_attr)  + (19 if countdown_attr == 'countdown_second_k' else 1))
                 setattr(countdown, total_attr, getattr(countdown, total_attr) + (640 if countdown_attr == 'countdown_second_l' else 1))
@@ -116,10 +137,10 @@ def countdown_generic(countdown_attr, total_attr, initial_seconds, default_total
             time.sleep(sleep_time)
 
 
-countdown_thread_a = threading.Thread(target=countdown_generic, args=('countdown_seconds_a', 'total_a', timedelta(days=97).total_seconds(), 20))
+countdown_thread_a = threading.Thread(target=countdown_generic, args=('countdown_seconds_a', 'total_a', timedelta(days=97).total_seconds(), 311))
 countdown_thread_b = threading.Thread(target=countdown_generic, args=('countdown_seconds_b', 'total_b', timedelta(seconds=788).total_seconds(), 401468))
 countdown_thread_c = threading.Thread(target=countdown_generic, args=('countdown_seconds_c', 'total_c', timedelta(seconds=5).total_seconds(), 129000000))
-countdown_thread_d = threading.Thread(target=countdown_generic, args=('countdown_second_d', 'total_d', timedelta(seconds=15).total_seconds(), 311))
+countdown_thread_d = threading.Thread(target=countdown_generic, args=('countdown_second_d', 'total_d', timedelta(days=97).total_seconds(), 311))
 countdown_thread_e = threading.Thread(target=countdown_generic, args=('countdown_second_e', 'total_e', timedelta(seconds=555).total_seconds(), 427545))
 countdown_thread_f = threading.Thread(target=countdown_generic, args=('countdown_second_f', 'total_f', timedelta(seconds=86100).total_seconds(), 3757))
 countdown_thread_g = threading.Thread(target=countdown_generic, args=('countdown_second_g', 'total_g', timedelta(seconds=807).total_seconds(), 886601))
@@ -236,6 +257,7 @@ def index():
     countdown = Countdown.query.first()
     remaining_a_time = '0:00:00'
     total_a_loops = 0
+    login_counter = LoginCounter.query.first()
     if countdown:
         remaining_a_time = str(timedelta(seconds=countdown.countdown_seconds_a))
         total_a_loops = countdown.total_a
@@ -283,7 +305,7 @@ def index():
     #print(f"server: remaining time: {remaining_a_time}, Total loops: {total_a_loops}")
 
 
-    return render_template('index.html', totalLike = total_likes, total_a_loops=total_a_loops, remaining_a_time=remaining_a_time, remaining_b_time=remaining_b_time, total_b_loops=total_b_loops, remaining_c_time=remaining_c_time, total_c_loops=total_c_loops, total_d_loops=total_d_loops, remaining_d_time=remaining_d_time, total_e_loops=total_e_loops, remaining_e_time=remaining_e_time, total_f_loops=total_f_loops, remaining_f_time=remaining_f_time, total_g_loops=total_g_loops, remaining_g_time=remaining_g_time, total_h_loops=total_h_loops, remaining_h_time=remaining_h_time, total_i_loops=total_i_loops, remaining_i_time=remaining_i_time, total_j_loops=total_j_loops, remaining_j_time=remaining_j_time, total_k_loops=total_k_loops, remaining_k_time=remaining_k_time, total_l_loops=total_l_loops, remaining_l_time=remaining_l_time, total_m_loops=total_m_loops, remaining_m_time=remaining_m_time, total_like=total_like, total_dislike=total_dislike, total_sad=total_sad, total_angry=total_angry, total_denial=total_denial, countermessage=countermessage)
+    return render_template('index.html', totalLike = total_likes, total_a_loops=total_a_loops, remaining_a_time=remaining_a_time, remaining_b_time=remaining_b_time, total_b_loops=total_b_loops, remaining_c_time=remaining_c_time, total_c_loops=total_c_loops, total_d_loops=total_d_loops, remaining_d_time=remaining_d_time, total_e_loops=total_e_loops, remaining_e_time=remaining_e_time, total_f_loops=total_f_loops, remaining_f_time=remaining_f_time, total_g_loops=total_g_loops, remaining_g_time=remaining_g_time, total_h_loops=total_h_loops, remaining_h_time=remaining_h_time, total_i_loops=total_i_loops, remaining_i_time=remaining_i_time, total_j_loops=total_j_loops, remaining_j_time=remaining_j_time, total_k_loops=total_k_loops, remaining_k_time=remaining_k_time, total_l_loops=total_l_loops, remaining_l_time=remaining_l_time, total_m_loops=total_m_loops, remaining_m_time=remaining_m_time, total_like=total_like, total_dislike=total_dislike, total_sad=total_sad, total_angry=total_angry, total_denial=total_denial, countermessage=countermessage, login_counter=login_counter)
 
 @app.route('/countdown-data')
 def get_countdown_data():
@@ -323,10 +345,6 @@ def get_countdown_data():
         return jsonify({'remaining_time_a': remaining_a_time, 'total_loops_a': total_a_loops, 'remaining_time_b': remaining_b_time, 'total_loops_b': total_b_loops, 'remaining_time_c': remaining_c_time, 'total_loops_c': total_c_loops, 'remaining_time_d': remaining_d_time, 'total_loops_d': total_d_loops, 'remaining_time_e': remaining_e_time, 'total_loops_e': total_e_loops, 'remaining_time_f': remaining_f_time, 'total_loops_f': total_f_loops, 'remaining_time_g': remaining_g_time, 'total_loops_g': total_g_loops, 'remaining_time_h': remaining_h_time, 'total_loops_h': total_h_loops, 'remaining_time_i': remaining_i_time, 'total_loops_i': total_i_loops, 'remaining_time_j': remaining_j_time, 'total_loops_j': total_j_loops, 'remaining_time_k': remaining_k_time, 'total_loops_k': total_k_loops, 'remaining_time_l': remaining_l_time, 'total_loops_l': total_l_loops, 'remaining_time_m': remaining_m_time, 'total_loops_m': total_m_loops})
     else:
         return jsonify({'remaining_time': '0:00:00', 'total_loops': 0})
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=True)
-    
     
 @app.route('/USACountdownClock', methods=['GET', 'POST'])
 def countdown_api():
@@ -343,3 +361,140 @@ def countdown_api():
     total_denial = 0 if total_denial is None else total_denial
 
     return render_template('USACountdownClock.html', countdown_data=countdown_data, total_like=total_like, total_dislike=total_dislike, total_sad=total_sad, total_angry=total_angry, total_denial=total_denial)
+
+# QUIZ
+
+quizUsers202 = {
+    "ulasA": "ulas",
+    "muhammed2": "muhammed",
+    "ceren2": "ceren",
+    "yagmur2": "yagmur",
+    "derya2": "derya",
+    "emine2": "emine",
+    "memehmet2": "mehmet",
+    "kadir2": "kadir",
+    "busra2": "busra",
+    "hacer2": "hacer",
+    "nilay2": "nilay",
+    "deniz2": "deniz",
+    "merve2": "merve",
+    "mustafa2": "mustafa",
+    "caglar2": "caglar",
+    "hakan2": "hakan",
+    "gokcen2": "gokcen",
+    "erva2": "erva",
+    "irem2": "irem",
+    "bengisu2": "bengisu",
+    "sevval2": "sevval",
+    "defne2": "defne",
+    "duru2": "duru",
+    
+}
+
+quizUsers201 = {
+    "ulasz": "ulas",
+    "benz": "ben",
+    "aliz": "ali",
+    "azraz": "azra",
+    "betulz": "ilsnesontpasentresdanslecole",
+    "batuhanz": "batuhan",
+    "elifz": "elif",
+    "ilyaz": "ilya",
+    "iremaz": "irema",
+    "irembz": "iremb",
+    "kaanz": "kaan",
+    "menekse": "jesaisquejaifaitbeaucoupdabsences",
+    "selinz": "selin",
+    "serhat": "jevaiprendreaecouter",
+    "sevvalz": "sevval",
+    "silaz": "sila",
+    "yagmurkapz": "yagmurkap",
+    "yagmurmiz": "yagmurmi",
+    "yigitaz": "yigita",
+    "yigitbz": "yigitb",
+    "1201unepizzabz": "aufromage",
+    "1201unesaladebz": "dethon",
+    "1201uncafebbz" : "aulait",
+    "1201duchobcolatz": "blanc",
+    "1201comptebdesecours1z": "10",
+    "1201comptedbesecours2z": "20",
+    "1201comptedebsecours3z": "30",
+    "1201comptedesbecours4z": "40",
+    "1201comptedesebcours5z": "50",
+    "1201comptedesecbours6z": "60",
+    "1201comptedesecoburs7z": "70",
+    "1201comptedesecoubrs8z": "80",
+    "1201comptedesecourbs9z": "90",
+
+
+}
+
+
+
+@app.route('/login202', methods=['GET', 'POST'])
+def login202():
+    data = request.json
+    username = data.get('username')
+    password = data.get('password')
+    print(username)
+    print(password)
+    
+
+    if username in quizUsers202 and quizUsers202[username] == password:
+        session['username'] = username
+        login_counter = LoginCounter.query.first()
+        if login_counter is None:
+            login_counter = LoginCounter(count=1)
+            db.session.add(login_counter)
+        login_counter.count += 1
+        db.session.commit()
+        return jsonify({'redirectTo': '/202'})
+    elif username in quizUsers201 and quizUsers201[username] == password:
+        session['username'] = username
+        login_counter = LoginCounter.query.first()
+        if login_counter is None:
+            login_counter = LoginCounter(count=1)
+            db.session.add(login_counter)
+        login_counter.count += 1
+        db.session.commit()
+        return jsonify({'redirectTo': '/201'})
+    else:
+        error_message = "Authentification refusée"
+        return jsonify({'error': 'Invalid username or password'}), 401
+    
+intro_question = question_list[0][1]
+
+
+@app.route('/202')
+def quiz202():
+    login_counter = LoginCounter.query.first()
+    print("login counter:", login_counter)
+    
+    if 'username' not in session and login_counter != None:
+
+        return redirect(url_for('index'))
+    else:
+        print("render app", intro_question)
+        return render_template('202.html', question=intro_question)
+    
+
+@app.route('/201')
+def quiz201():
+    login_counter = LoginCounter.query.first()
+    print("login counter:", login_counter)
+    
+    if 'username' not in session and login_counter != None:
+
+        return redirect(url_for('index'))
+    else:
+        print("render app", intro_question)
+        return render_template('201.html', question=intro_question)
+
+
+#configure logging
+handler = RotatingFileHandler('error.log', maxBytes=10000, backupCount=1)
+handler.setLevel(logging.ERROR)
+app.logger.addHandler(handler)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8000, debug=True)
