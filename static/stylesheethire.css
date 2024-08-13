@@ -1,0 +1,1593 @@
+*{
+    text-decoration:none;
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+::selection {
+    background-color:#DCD3E2;
+}
+
+
+.postText li{
+    font-family:'Questrial', sans-serif;
+    color:#71306E;
+    font-size:18px;
+    font-weight:300;
+    line-height:40px;
+    letter-spacing:1px;
+    margin-top: 2%;
+}
+
+ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+
+h1{
+    
+    font-family: 'Questrial', sans-serif;
+    display:flex;
+    flex-direction:column;
+    color:#fe0092;
+    font-weight:800;    
+    font-size:35px;
+    letter-spacing:1px;
+}
+
+h2{
+    font-family: 'Questrial', sans-serif;
+    display:flex;
+    flex-direction:column;
+    color:#fe0092;
+    font-weight:600;    
+    font-size:25px;
+    letter-spacing: .4px;
+}
+
+h3{
+     font-family:'Questrial', sans-serif;
+    color:#fe0092;
+    font-size:35px;
+    font-weight:400;
+    letter-spacing: 1px;
+    line-height: 10px;
+}
+
+
+h4{
+    font-family:'Questrial', sans-serif;
+    color:#fe0092;
+    font-size:35px;
+    font-weight:800;
+    
+}
+
+h5{
+     font-family:'Questrial', sans-serif;
+    color:#71306E;
+    font-size:18px;
+    font-weight:300;
+    line-height:40px;
+    letter-spacing:1px;
+    
+}
+
+p{
+    font-family:'Questrial', sans-serif;
+    color:#71306E;
+    font-size:18px;
+    font-weight:300;
+    line-height:40px;
+    letter-spacing:1px;
+    margin-top: 2%;
+}
+
+
+.mainNavFrame{
+    width:100%;
+    height:14%;
+    background-color:#F85611;
+    position:fixed;
+    display:flex;
+    flex-direction:column;
+    margin-top:0;
+    z-index:11;
+    justify-content:center;
+    }
+
+
+
+.shrink {
+  height: 5%;
+}
+
+
+.header{
+    position:relative;
+    width:100%;
+    height:90%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#F85611;
+    transition: 0.5s;
+    background:none;
+    text-align:center;
+
+}
+
+.logo{
+    font-family:'Questrial', sans-serif;
+    color:white;
+    font-size:18px;
+}
+
+.navigation {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+}
+
+.menu{
+    display:flex;
+    justify-content:center;
+    flex-direction:row;
+    align-items:center;
+    text-align:center;
+    transition: 0.8s ease-in-out;
+    background:none;
+    width:80%;
+    height:100%;
+
+}
+
+
+
+.menu li{
+    list-style-type:none;
+}
+
+.menu li a{
+    color:white;
+    text-decoration:none;
+    font-family:'Questrial', sans-serif;
+    display:block;
+    letter-spacing:1px;
+    font-size:17px;
+    font-weight:400;
+    line-height:30px;
+    transition:0.3s;
+    background-color:none;
+    
+
+}
+
+.spacer{
+    width:2%;
+}
+
+#contactCircle{
+    width:110px;
+    height:110px;
+    background-color:#F5008B;/*#E0007F;/*#CC0074;/*#F90B6F;*/
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    vertical-align:middle;
+
+}
+
+#secondlink{
+    width:100%;
+     
+}
+
+
+#sixthLink{
+    vertical-align:middle;
+    padding:auto;
+    margin:auto;
+    animation: rotating 6s linear infinite;
+    color:white;
+    font-family: 'Questrial', sans-serif;
+    font-size:16px;
+    font-weight:300;
+    letter-spacing:1px;
+    
+}
+
+ @keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.menu li a:hover{
+    color:none;
+}
+
+
+.hamburger{
+    position:relative;
+    width:25px;
+    height:3px;
+    background:#91a28a;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+    z-index:2;
+}
+
+.hamburger:before,
+.hamburger:after{
+    content:"";
+    position:absolute;
+    height:3px;
+    right:0;
+    background:#91a28a;
+    transition:0.3s;
+}
+
+.hamburger:before {
+    top: -10px;
+    width:24px;
+ }
+
+.hamburger:after {
+    top: 10px;
+    width:25px;
+}
+
+.toggle-menu {
+    position:absolute;
+    width:30px;
+    height:25px;
+    cursor:pointer;
+    opacity:0;
+    z-index:3;
+}
+
+.hamburger,
+.toggle-menu {
+    display:none;
+}
+
+.navigation input:checked ~ .hamburger
+{
+    background: transparent;
+}
+
+.navigation input:checked ~ .hamburger:before
+{
+    top:0;
+    transform: rotate(-45deg);
+    width:24px;
+}
+
+.navigation input:checked ~ .hamburger:after
+{
+    top:0;
+    transform: rotate(45deg);
+    width:24px;
+}
+
+
+.navigation input:checked ~ .menu{
+    right: 0;
+}
+
+
+
+
+
+#landing{
+    background-color:orange;
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+    padding:auto;
+    width:100%;
+    height:50%;
+    position:relative;
+}
+
+
+#landingContent{
+    display:flex;
+    flex-direction:row;
+    margin:auto;
+    padding:auto;
+    background-color:#F85611;
+    z-index:10;
+    width:100%;
+    align-items:center;
+    justify-content: center;
+}
+
+#blogImageContainer{
+    background-color:none;
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: left;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
+#blogImage{
+    width: 30%;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 13s forwards;
+}
+
+
+/******************POSTS*********************/
+
+#main{
+    padding-top: 7%;
+}
+
+#servicesTitle{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    align-items: left;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.section{
+    margin: auto;
+    width: 55%;
+    height: auto;
+    padding-top: 2%;
+}
+
+.postContainer{
+    width: 100%;
+    margin: auto;
+}
+
+
+.readButton{
+    border-radius: 10px;
+    width:80px;
+height: 23px;
+margin:auto;
+margin-top:2%;
+margin-bottom:5%;
+
+}
+
+
+#readButton:hover {
+background:lightgray;
+}
+#readButton:active {
+background:#F85611;
+}
+
+#githubLogoPart{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#githubLogoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:5%;
+    padding-right: 5px;
+
+}
+
+
+
+#heartLikeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;    
+}
+
+#github{
+    margin: auto;
+    width:100%;
+    height: auto;
+}
+
+
+
+
+#likeCount{
+    display:flex;
+    font-family: 'Questrial', sans-serif;
+    font-size:18px;
+    font-weight:600;
+    color:#F85611;
+    margin:auto;
+    padding:auto;
+    margin-top: 8%;
+}
+
+#message{
+    font-family: 'Questrial', sans-serif;
+    font-size:14pt;
+    font-weight:400;
+    color:#F85611;
+    margin:auto;
+    padding:auto;
+    margin-top:4%;
+    margin-bottom: 1%;
+}
+
+#likeButton{
+    width:80px;
+    height: 23px;
+    border-radius:10px;
+    margin:auto;
+    margin-top:2%;
+    margin-bottom:5%;
+}
+
+#likeButton:hover {
+    background:lightgray;
+}
+#likeButton:active {
+    background:#F85611;
+}
+
+
+
+@media (min-width:1271px) and (max-width:1371px)  {
+
+
+    #contactCircle{
+        width:100px;
+        height:100px;
+        background-color:#F90B6F;
+        border-radius:50%;
+        display:flex;
+        justify-content:center;
+        vertical-align:middle;
+        
+    
+    }
+    
+    
+    .menu{
+        justify-content:space-between;
+       
+        width:90%;
+    
+    }
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:11px;
+        font-weight:600;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:11px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+    .shrink {
+      height: 8%;
+    }
+    
+    
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:12px;
+        font-weight:800;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:13px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+    
+  
+    h4{
+        font-size:25px;
+    }
+    
+    h5{
+        font-size:12px;
+    }
+    
+    #port1{
+        font-weight: 200;
+        margin-top:20%;
+        letter-spacing: 0.2px;
+        font-size: 20px;
+    
+    }
+    
+    #port2, #port22, #port23{
+        font-weight: 600;
+        line-height: 70px;
+        font-size: 65px;
+    }
+    
+    
+    #blogImageContainer{
+        display: flex;
+        margin: auto;
+        vertical-align: middle;
+        padding-top: 12%;
+    }
+
+    #blogImage{
+        width: 60%;
+        margin: auto;
+    }
+ 
+    #firstLine{
+       
+        width:80%;
+            }
+
+  
+
+    .postContainer{
+        margin-top: 2%;
+        background-color: none;
+    }
+
+    .postTitle{
+        line-height: 40px;
+    }
+    
+    }
+    /****************************************************/
+    
+
+
+
+
+
+
+
+
+@media (min-width:1171px) and (max-width:1271px) {
+
+
+    #contactCircle{
+        width:100px;
+        height:100px;
+        background-color:#F90B6F;
+        border-radius:50%;
+        display:flex;
+        justify-content:center;
+        vertical-align:middle;
+        
+    
+    }
+    
+    
+    .menu{
+        justify-content:space-between;
+       
+        width:90%;
+    
+    }
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:11px;
+        font-weight:600;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:11px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+    .shrink {
+      height: 8%;
+    }
+    
+    
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:12px;
+        font-weight:800;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:13px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+    
+  
+    h4{
+        font-size:25px;
+    }
+    
+    h5{
+        font-size:12px;
+    }
+    
+    #port1{
+        font-weight: 200;
+        margin-top:20%;
+        letter-spacing: 0.2px;
+        font-size: 20px;
+    
+    }
+    
+    #port2, #port22, #port23{
+        font-weight: 500;
+        line-height: 65px;
+        font-size: 65px;
+    }
+    
+    
+    #blogImageContainer{
+        display: flex;
+        margin: auto;
+        vertical-align: middle;
+        padding-top: 12%;
+    }
+
+    #blogImage{
+        width: 60%;
+        margin: auto;
+    }
+ 
+    #firstLine{
+       
+        width:70%;
+            }
+
+   
+
+    .postContainer{
+        margin-top: 2%;
+        background-color: none;
+    }
+
+    .postTitle{
+        line-height: 40px;
+    }
+    
+    }
+    /****************************************************/
+    
+
+
+
+
+
+
+@media (min-width:871px) and (max-width:1171px)  {
+
+
+    #contactCircle{
+        width:100px;
+        height:100px;
+        background-color:#F90B6F;
+        border-radius:50%;
+        display:flex;
+        justify-content:center;
+        vertical-align:middle;
+        
+    
+    }
+    
+    
+    .menu{
+        justify-content:space-between;
+       
+        width:90%;
+    
+    }
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:11px;
+        font-weight:600;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:11px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+    .shrink {
+      height: 8%;
+    }
+    
+    
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:12px;
+        font-weight:800;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:13px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+    
+  
+    h4{
+        font-size:25px;
+    }
+    
+    h5{
+        font-size:12px;
+    }
+    
+    #port1{
+        font-weight: 200;
+        margin-top:20%;
+        letter-spacing: 0.2px;
+        font-size: 20px;
+    
+    }
+    
+    #port2, #port22, #port23{
+        font-weight: 400;
+        line-height: 65px;
+        font-size: 65px;
+    }
+    
+    
+    #blogImageContainer{
+        display: none;
+    }
+    
+    
+    #firstLine{
+       
+        width:90%;
+            }
+
+    .section{
+        width: 80%;
+    }
+
+    .postContainer{
+        margin-top: 2%;
+    }
+
+    .postTitle{
+        line-height: 40px;
+    }
+    
+    }
+    /****************************************************/
+    
+
+@media (min-width:771px) and (max-width:871px) {
+
+
+    #contactCircle{
+        width:90px;
+        height:90px;
+        background-color:#F90B6F;
+        border-radius:50%;
+        display:flex;
+        justify-content:center;
+        vertical-align:middle;
+        
+    
+    }
+    
+    
+    .menu{
+        justify-content:space-between;
+       
+        width:90%;
+    
+    }
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:11px;
+        font-weight:600;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:11px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+    .shrink {
+      height: 8%;
+    }
+    
+    
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:12px;
+        font-weight:800;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:13px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+
+    h1{
+        font-size: 28px;
+        line-height: 37px;
+    }
+    
+    
+  
+    h4{
+        font-size:25px;
+    }
+    
+    h5{
+        font-size:12px;
+    }
+    
+    #port1{
+        font-weight: 200;
+        margin-top:20%;
+        letter-spacing: 0.2px;
+        font-size: 20px;
+    
+    }
+    
+    #port2, #port22, #port23{
+        font-weight: 400;
+        line-height: 65px;
+        font-size: 65px;
+    }
+    
+    
+    #blogImageContainer{
+        display: none;
+    }
+    
+    
+    #firstLine{
+       
+        width:90%;
+            }
+
+            
+
+            .section{
+                width: 80%;
+                padding-top: 3%;
+            }     
+           
+
+    .postContainer{
+        margin-top: 2%;
+        background-color: none;
+    }
+
+    .postTitle{
+        line-height: 40px;
+    }
+    
+    }
+    /****************************************************/
+    
+
+@media (min-width:671px) and (max-width:771px) {
+
+
+    h2{
+        line-height: 30px;
+       }
+    #contactCircle{
+        width:80px;
+        height:80px;
+        background-color:#F90B6F;
+        border-radius:50%;
+        display:flex;
+        justify-content:center;
+        vertical-align:middle;
+        
+    
+    }
+    
+    
+    .menu{
+        justify-content:space-between;
+       
+        width:90%;
+    
+    }
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:11px;
+        font-weight:600;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:11px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+    .shrink {
+      height: 8%;
+    }
+    
+    
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:12px;
+        font-weight:800;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:13px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+
+    h1{
+        font-size: 28px;
+        line-height: 35px;
+    }
+    
+    
+    
+    
+    h4{
+        font-size:25px;
+    }
+    
+    h5{
+        font-size:12px;
+    }
+    
+    #port1{
+        font-weight: 200;
+        margin-top:20%;
+        letter-spacing: 0.2px;
+        font-size: 20px;
+    
+    }
+    
+    #port2, #port22, #port23{
+        font-weight: 400;
+        line-height: 55px;
+        font-size: 55px;
+    }
+    
+    
+    #blogImageContainer{
+        display: none;
+    }
+    
+    
+    #firstLine{
+       
+        width:90%;
+            }
+    
+            .section{
+                width: 80%;
+                padding-top: 3%;
+            } 
+
+            #githubLogoContainer{
+                width:15%;
+            
+            }
+
+
+    }
+  
+   
+   
+ 
+
+    /****************************************************/
+    
+
+@media (min-width:571px) and (max-width:671px) {
+
+
+    h2{
+        line-height: 30px;
+       }
+    #contactCircle{
+        width:70px;
+        height:70px;
+        background-color:#F90B6F;
+        border-radius:50%;
+        display:flex;
+        justify-content:center;
+        vertical-align:middle;
+        
+    
+    }
+    
+    
+    .menu{
+        justify-content:space-between;
+       
+        width:90%;
+    
+    }
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:11px;
+        font-weight:800;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:11px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+    .shrink {
+      height: 8%;
+    }
+    
+    
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:12px;
+        font-weight:800;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:13px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+   
+
+    h1{
+        font-size: 28px;
+        line-height: 35px;
+    }
+    
+    
+    
+    h4{
+        font-size:25px;
+    }
+    
+    h5{
+        font-size:12px;
+    }
+    
+    #port1{
+        font-weight: 200;
+        margin-top:20%;
+        letter-spacing: 0.2px;
+        font-size: 20px;
+    
+    }
+    
+    #port2, #port22, #port23{
+        font-weight: 400;
+        line-height: 55px;
+        font-size: 55px;
+    }
+    
+    
+    #blogImageContainer{
+        display: none;
+    }
+    
+    
+    #firstLine{
+       
+    width:90%;
+    }
+
+    .section{
+        width: 90%;
+        padding-top: 3%;
+    }
+            
+    #githubLogoContainer{
+        width:15%;
+    
+    }
+
+           
+                 
+    }
+    /****************************************************/
+    
+
+
+
+@media  (min-width:471px) and (max-width:571px){
+
+
+    h2{
+        line-height: 38px;
+       }
+
+
+       p{
+        
+        line-height:35px;
+    }
+    
+    #contactCircle{
+        width:75px;
+        height:75px;
+        background-color:#F90B6F;
+        border-radius:50%;
+        display:flex;
+        justify-content:center;
+        vertical-align:middle;
+        
+    
+    }
+    
+    
+    .menu{
+        justify-content:space-between;
+       
+        width:90%;
+    
+    }
+    
+    
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:11px;
+        font-weight:800;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:11px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+    .shrink {
+      height: 8%;
+    }
+    
+    
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:12px;
+        font-weight:800;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:13px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+  
+
+    h1{
+        font-size: 27px;
+        line-height: 35px;
+    }
+    
+    
+    h4{
+        font-size:25px;
+    }
+    
+    h5{
+        font-size:12px;
+    }
+    
+    #port1{
+        font-weight: 200;
+        margin-top:20%;
+        letter-spacing: 0.2px;
+        font-size: 20px;
+    
+    }
+    
+    #port2, #port22, #port23{
+        font-weight: 300;
+        line-height: 45px;
+        font-size: 45px;
+    }
+    
+    
+    #blogImageContainer{
+        display: none;
+    }
+    
+    
+    #firstLine{
+       
+        width:90%;
+    
+            }
+            .section{
+                width: 90%;
+                padding-top: 3%;
+            }
+            
+            #githubLogoContainer{
+                width:15%;
+            
+            }
+
+    }
+    /****************************************************/
+    
+
+
+
+@media (min-width:421px) and (max-width:471px){
+
+    
+    h2{
+        line-height: 38px;
+        font-size:23px;
+       }
+
+
+       p{
+        
+        line-height:35px;
+    }
+
+
+#contactCircle{
+    width:60px;
+    height:60px;
+    background-color:#F90B6F;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    vertical-align:middle;
+    
+
+}
+
+
+.menu{
+    justify-content:space-between;
+   
+    width:90%;
+
+}
+
+
+.menu li a{
+    
+    letter-spacing:1px;
+    font-size:11px;
+    font-weight:800;
+    line-height:30px;
+    transition:0.3s;
+}
+
+
+#sixthLink{
+    
+     font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+    
+}
+
+.shrink {
+  height: 8%;
+}
+
+
+.menu li a{
+    
+    letter-spacing:1px;
+    font-size:12px;
+    font-weight:800;
+    line-height:30px;
+    transition:0.3s;
+}
+
+
+#sixthLink{
+    
+     font-size:13px;
+    font-weight:800;
+    letter-spacing:2px;
+    
+}
+
+
+h1{
+    font-size: 25px;
+    line-height: 35px;
+}
+
+
+h4{
+    font-size:25px;
+}
+
+h5{
+    font-size:12px;
+}
+
+#port1{
+    font-weight: 200;
+    margin-top:20%;
+    letter-spacing: 0.2px;
+    font-size: 20px;
+
+}
+
+#port2, #port22, #port23{
+    font-weight: 200;
+    line-height: 40px;
+    font-size: 40px;
+}
+
+
+#blogImageContainer{
+    display: none;
+}
+
+
+#firstLine{
+   
+    width:90%;
+        }
+        .section{
+            width: 90%;
+            padding-top: 3%;
+        } 
+        #githubLogoContainer{
+            width:18%;
+        
+        }
+
+}
+/****************************************************/
+
+@media (min-width:321px) and (max-width:421px) {
+
+
+    h2{
+        line-height: 38px;
+        font-size: 20px;
+       }
+
+
+       p{
+        
+        line-height:35px;
+    }
+
+
+    #contactCircle{
+        width:75px;
+        height:75px;
+        background-color:#F90B6F;
+        border-radius:50%;
+        display:flex;
+        justify-content:center;
+        vertical-align:middle;
+        
+    
+    }
+    
+    
+    .menu{
+        justify-content:space-between;
+       
+        width:90%;
+    
+    }
+    
+    
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:11px;
+        font-weight:800;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:11px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+    .shrink {
+      height: 8%;
+    }
+    
+    
+    .menu li a{
+        
+        letter-spacing:1px;
+        font-size:12px;
+        font-weight:800;
+        line-height:30px;
+        transition:0.3s;
+    }
+    
+    
+    #sixthLink{
+        
+         font-size:13px;
+        font-weight:800;
+        letter-spacing:2px;
+        
+    }
+    
+    .postContainer{
+        margin-top: 3%;
+    }
+
+    h1{
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    h4{
+        font-size:25px;
+    }
+    
+    h5{
+        font-size:12px;
+    }
+    
+    
+    
+    #blogImageContainer{
+        display: none;
+    }
+    
+    
+    #firstLine{
+       
+        width:90%;
+            }
+            .section{
+                width: 90%;
+                padding-top: 3%;
+            } 
+    
+            #githubLogoContainer{
+                width:18%;
+            
+            }
+            
+            
+    }
