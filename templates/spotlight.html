@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="Spotlight animation for landing pageS"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="upgrade-insecure-requests"
+		/>
+		<!--avoids unsecure connection warnings & enables JS scroll properities-->
+		<title>Spotlight Lensflare Animation Demo</title>
+
+		<link
+			rel="icon"
+			href="../images/favicon.ico"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="/static/spotlight.css"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+		<title>demo</title>
+
+		<title>Document</title>
+	</head>
+	<body>
+
+
+	<div id="mainContainer">
+		<div id="header">
+			<div id="headerContainer">
+				<p id="p1"
+					>We use cookies. See
+					<span id="cookie-policy">ulas Cookie Policy</span> for more info.</p
+				>
+				<div id="buttonContainer">
+					<button id="button1">ACCEPT</button>
+					<button id="button2">SETTINGS</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="main">
+			<div id="navBar">
+				<div id="logoContainer">
+					
+				</div>
+				<nav>
+					<ul class="nav-links">
+						<li>work</li>
+						<li>services</li>
+						<li>about</li>
+						<li>contact</li>
+						<li
+							id="linkButton"
+							style="
+								font-size: 20px;
+								background: #2e2e2e;
+								padding: 8px 14px 8px 14px;
+								border-radius: 30px;
+								color: #cfae17;
+							"
+							>book a meeting</li
+						>
+					</ul>
+				</nav>
+			</div>
+
+			<div id="section1">
+
+				<div id="onlyAvailableMessage">
+					The animation is only available on screens wider than 1300px.
+				</div>
+				<div id="section1Container">
+					<div id="section1TextsContainer">
+						<div id="youDeserveContainer">
+							<p
+								id="youDeserve"
+								class="youDeserveTheSpotLight"
+								>BREAK FREE</p
+							>
+						</div>
+						<div id="theSpotLightContainer">
+							<p
+								id="theSpotLight"
+								class="youDeserveTheSpotLight"
+								>FROM OBSCURITY</p
+							>
+						</div>
+						<div id="criticalInformationContainer">
+							<p
+								id="criticalInformation"
+								class="criticalInformation"
+								>Bring your services and products into the spotlight with precision to engage your audience.</p
+							>
+						</div>
+						<div id="withCommunicationContainer">
+							<p
+								id="withCommunication"
+								class="criticalInformation"
+								>Illuminate your offerings clearly to captivate your audience and drive engagement.</p
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--DUPLICATED PART FOR SPOTLIGHT ANIMATION -->
+
+		<div class="headerHidden">
+			<div id="headerContainer">
+				<p id="p1"
+					>We use cookies. See
+					<span id="cookie-policy">our Cookie Policy</span> for more info.</p
+				>
+				<div id="buttonContainer">
+					<button id="button1">ACCEPT</button>
+					<button id="button2">SETTINGS</button>
+				</div>
+			</div>
+		</div>
+
+		<!--ANIMATION STARTS HERE-->
+
+		<div class="flareContainer">
+			<div class="small-flare"></div>
+			<div class="medium-flare"></div>
+			<div class="large-flare"></div>
+			<div id="flare"></div>
+			<div class="mainHidden">
+				<div class="navBarHidden">
+					<div id="logoContainer">
+						
+					</div>
+					<div class="navHidden">
+						<ul class="nav-links">
+							<li class="linkHidden">work</li>
+							<li class="linkHidden">services</li>
+							<li class="linkHidden">about</li>
+							<li class="linkHidden">contact</li>
+							<li
+								class="linkButtonHidden"
+								style="
+									font-size: 20px;
+									background: #cfae17;
+									padding: 8px 14px 8px 14px;
+									border-radius: 30px;
+									color: #2e2e2e;
+								"
+								>book a meeting</li
+							>
+						</ul>
+					</div>
+				</div>
+				<div class="section1Hidden">
+					<div class="section1ContainerHidden">
+						<div class="section1TextsContainerHidden">
+							<div class="youDeserveContainerHidden">
+								<p class="youDeserveHidden">BREAK FREE</p>
+							</div>
+							<div class="theSpotLightContainerHidden">
+								<p class="theSpotLightHidden">FROM OBSCURITY</p>
+							</div>
+							<div class="criticalInformationContainerHidden">
+								<p class="criticalInformationHidden"
+									>Bring your services and products into the spotlight with precision to engage your audience.</p
+								>
+							</div>
+							<div class="withCommunicationContainerHidden">
+								<p class="withCommunicationHidden"
+									>Illuminate your offerings clearly to captivate your audience and drive engagement.</p
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+			integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		<script src="/static/spotlightjs/script.js"></script>
+		<script src="whoareyou.js"></script>
+		<script src="hardwork.js"></script>
+	</body>
+</html>

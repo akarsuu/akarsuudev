@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        
+        
+	<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!--avoids unsecure connection warnings & enables JS scroll properities-->
+        <meta name="description" lang="en" content="Understand how revisions are managed during your project. I welcome your feedback and accommodate change requests to ensure seamless integration into the development process, keeping you informed and involved every step of the way.">
+       
+        <meta name="author" content="ulas akarsu">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://akarsuu.dev/revisions.html">
+       
+        
+        
+        
+        <link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>       
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+        
+        <!-- TIME ZONE INFO ---BOTH ARE REQUIRED -->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.31/builds/moment-timezone-with-data.min.js"></script>
+
+
+        <!--CHANGING TEXT COLOR ON SCROLL-->
+        
+         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
+        <!-- jquery to like-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+        
+        <!-- CSS-->
+        <link rel="stylesheet" href="../static/stylesheetrevisions.css">
+        <link rel="icon" href="../static/images/favicon.ico" />
+
+
+        <title>Akarsuu's PortFolio</title>
+        <meta name="google-site-verification" content="cKFnSICH8LxBkyd_RCIEjo324I1HLMfZ7tg3Udf7SPE" />
+
+        
+    </head>
+    
+    <body>
+    
+        <div class="mainNavFrame shrink">
+            
+           
+           
+               
+                <header class="header">
+                    
+                    <div class="logo">
+                    </div>
+                    
+                    <div class="navigation">
+                        
+                        <input type="checkbox" class="toggle-menu" id="toggle">
+                        <div class="hamburger">
+                            
+                        </div>
+                        
+                        <ul class="menu">
+                            
+                            <li><a id="secondlink" href="https://akarsuu.dev/#webProjects">Web Projects</a></li>
+                            
+                            <div class="spacer"></div>
+                            <li><a id="thirdlink" href="https://akarsuu.dev/#anchor1">Coding Stuff</a></li>
+
+                            <div class="spacer"></div>
+                            <div id="contactCircle">
+                                
+
+                                <a id="sixthLink" href="mailto:ulasakarsu@gmail.com?subject=Email subject&body=Email body">Contact</a>
+                            </div>
+                        </ul>
+                    </div>
+                    
+                    
+                </header>
+
+            
+           
+            
+        </div>
+       
+        <div id="main">
+
+            <section class="section">
+
+                <div id="informationTitle">
+                    <h1>Can you request changes or revisions during the freelance development project?
+
+
+                    </h1>
+                </div>
+
+                <p>Absolutely. Throughout the development process, your satisfaction is paramount. You are encouraged to request changes and revisions as needed. To facilitate this, I develop your website on a demo domain that's live and accessible online. This allows you to monitor progress in real-time and easily visualize any adjustments or enhancements required. Together, we'll ensure that your vision for the website is realized, with seamless integration of any modifications into the development timeline.
+                </p>
+            </section>
+
+               <br>
+             
+                
+            
+            
+            <br><br>
+            <br><br>            <br><br>            <br><br>               
+
+                    
+            <br>
+            <br>
+                        
+        
+
+                    
+
+            
+            
+            <div id="githubLogoPart">
+                <div id="githubLogoContainer">
+                    <a href="https://github.com/akarsuu/" target="_blank">
+                        <img id="github" src="static/images/githubLogo.png">
+                    </a>
+                </div>
+               
+               
+                <div id="heartLikeContainer">
+                    
+                            
+                   
+                       
+                    <div id="likeCount">
+                        {{totalLike}} likes
+                    </div>
+                    
+                    <div id="message">
+                        {{message}}
+                    </div>
+                    
+                    <button id="likeButton">
+                        Like
+                    </button>
+                </div>
+                  
+               
+                
+            </div>
+                
+               
+            
+            
+     
+        
+        <br>
+        <br>
+        <br>
+        <br>
+            <!--Contact Button Bottom Of Page -->
+        <script>
+
+    document.getElementById('buttonContact').addEventListener('click', function() {
+        window.location.href = 'mailto:ulasakarsu@gmail.com?subject=Email subject&body=Email body';
+    });
+</script>
+
+</section>
+
+        </script>
+
+        <script>
+    
+            window.onscroll = function() {
+          if (window.pageYOffset > 350) {
+            document.querySelector(".mainNavFrame").classList.add("shrink");
+          } else {
+            document.querySelector(".mainNavFrame").classList.remove("shrink");
+          }
+        };
+            
+        </script>
+        
+        
+        <script>
+        var likeButton = document.getElementById('likeButton');
+        var likeCount = document.getElementById('likeCount');
+        var message = document.getElementById('message');
+        
+        likeButton.addEventListener('click', function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/like');
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    console.log('Like added successfully!');
+                    var response = JSON.parse(xhr.responseText);
+                    likeCount.innerHTML = response.totalLike + " likes";
+                    message.innerHTML = response.message;
+                } else {
+                    console.log('Failed to add like');
+                    message.innerHTML = "Your like is already added.";
+                }
+            };
+            xhr.send(JSON.stringify({}));
+        });
+        </script>
+        
+  
+     
+  </body>
+  
+</html>
